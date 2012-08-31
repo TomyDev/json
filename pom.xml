@@ -5,4 +5,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>JsonFormatter</name>
   <description>This little tool is for pretty printing JSON Strings				</description>
+  <dependencies>
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.4</version>
+      </dependency>
+  </dependencies>
 </project>
