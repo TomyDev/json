@@ -1,5 +1,7 @@
 package de.tomy.jsonformatter;
 
+import de.tomy.jsonformatter.ui.UserInterface;
+
 public class Main {
 
     /**
@@ -7,6 +9,7 @@ public class Main {
      */
     public static void main(final String[] args)
     {
-
+        final UserInterface uif = new UserInterface();
+        uif.buildInterface();
     }
 }
