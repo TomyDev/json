@@ -88,5 +88,41 @@ public class JsonTreeNode implements TreeNode
     {
         return _treeNodeType.equals(TreeNodeTypes.Leaf);
     }
+    @Override
+    public int hashCode()
+    {
+        final int prime = 31;
+        int result = 1;
+        result = (prime * result) + ((_children == null) ? 0 : _children.hashCode());
+        result = (prime * result) + ((_data == null) ? 0 : _data.hashCode());
+        result = (prime * result) + ((_parent == null) ? 0 : _parent.hashCode());
+        result = (prime * result) + ((_treeNodeType == null) ? 0 : _treeNodeType.hashCode());
+        return result;
+    }
+    @Override
+    public boolean equals(final Object obj)
+    {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        final JsonTreeNode other = (JsonTreeNode) obj;
+        if (_children == null)
+        {
+            if (other._children != null) return false;
+        }
+        else if (!_children.equals(other._children)) return false;
+        if (_data == null)
+        {
+            if (other._data != null) return false;
+        }
+        else if (!_data.equals(other._data)) return false;
+        if (_parent == null)
+        {
+            if (other._parent != null) return false;
+        }
+        else if (!_parent.equals(other._parent)) return false;
+        if (_treeNodeType != other._treeNodeType) return false;
+        return true;
+    }
 
 }

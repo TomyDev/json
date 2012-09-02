@@ -1,19 +1,14 @@
 package de.tomy.jsonformatter;
 
 import java.io.IOException;
+import java.util.List;
+import javax.swing.tree.TreeNode;
 import org.apache.commons.io.IOUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import de.tomy.jsonformatter.json.JsonParser;
 
 public class Main {
 
-    /**
-     * @param args
-     * @throws IOException
-     * @throws IllegalAccessException
-     * @throws InstantiationException
-     * @throws JsonProcessingException
-     */
     public static void main(final String[] args) throws JsonProcessingException, InstantiationException, IllegalAccessException, IOException
     {
         //        final UserInterface uif = new UserInterface();
@@ -33,7 +28,7 @@ public class Main {
                 "    \"Partner\": null\n" +
                 "  }\n" +
                 "}"));
-        parser.getRootNode();
+        final List<TreeNode> allNodes = parser.getNodes();
 
     }
 }

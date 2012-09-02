@@ -89,4 +89,10 @@ public class JsonParser
         }
         return result;
     }
+
+    public List <TreeNode> getNodes()
+    {
+        return _nodes;
+    }
+
 }
